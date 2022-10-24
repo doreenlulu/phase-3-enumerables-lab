@@ -9,17 +9,33 @@ def spicy_foods
   ]
 end
 
+
+
 # given an array of spicy foods, **return an array of strings**
 # with the names of each spicy food
 def get_names(spicy_foods)
   # your code here
+  spicy_foods.filter do |food|
+  food[:name] > 5
+  spicy_foods
+  end
 end
+
+
 
 # given an array of spicy foods, **return an array of hashes** 
 # where the heat level of the food is greater than 5
 def spiciest_foods(spicy_foods)
   # your code here
+  sorted_levels = spicy_foods.sort do |heat_level1, heat_level2|
+    if heat_level1[:heat_level] > 5
+      sorted_levels
+  # spicy_foods.find do |spicy_foods|
+  #   spicy_foods[:heat_level] > 5
+  # end
 end
+
+
 
 # given an array of spicy foods, **output to the terminal**
 # each spicy food in the following format: 
@@ -30,17 +46,23 @@ def print_spicy_foods(spicy_foods)
   # your code here
 end
 
+
+
 # given an array of spicy foods and a string representing a cuisine, **return a single hash**  
 # for the spicy food whose cuisine matches the cuisine being passed to the method
 def get_spicy_food_by_cuisine(spicy_foods, cuisine)
   # your code here
 end
 
+
+
 # Given an array of spicy foods, **return an array of hashes** 
 # sorted by heat level from lowest to highest
 def sort_by_heat(spicy_foods)
   # your code here
 end
+
+
 
 # given an array of spicy foods, output to the terminal ONLY 
 # the spicy foods that have a heat level greater than 5, in the following format: 
@@ -49,6 +71,8 @@ end
 def print_spiciest_foods(spicy_foods)
   # your code here
 end
+
+
 
 # given an array of spicy foods, return an integer representing 
 # the average heat level of all the spicy foods in the array
